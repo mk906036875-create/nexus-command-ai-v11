@@ -1,1 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="NEXUS COMMAND AI V11 — Enterprise Autonomous Decision Intelligence Platform for revenue risk detection, recovery forecasting and executive decision support."
+  >
+
+  <meta
+    name="theme-color"
+    content="#05070c"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>
+    NEXUS COMMAND AI — V11 Enterprise Intelligence
+  </title>
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- MAIN CSS -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+  <!-- =====================================================
+       TOP BAR
+  ====================================================== -->
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <div class="logo">
+        NX
+      </div>
+
+      <div class="brand-copy">
+
+        <strong>
+          NEXUS COMMAND AI
+        </strong>
+
+        <span>
+          ENTERPRISE AUTONOMOUS DECISION INTELLIGENCE
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="top-right">
+
+      <div class="live">
+
+        <i></i>
+
+        LIVE INTELLIGENCE
+
+      </div>
+
+
+      <div class="version">
+        V11.0
+      </div>
+
+
+      <button
+        class="demo-btn"
+        onclick="openLeadForm()"
+      >
+
+        REQUEST EXECUTIVE DEMO →
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main>
+
+
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section class="hero">
+
+
+      <div class="hero-copy">
+
+
+        <div class="eyebrow">
+
+          AUTONOMOUS REVENUE INTELLIGENCE · V11.0
+
+        </div>
+
+
+        <h1>
+
+          Turn business signals into
+
+          <span>
+            executive decisions.
+          </span>
+
+        </h1>
+
+
+        <p>
+
+          NEXUS continuously analyzes business pressure,
+          identifies revenue exposure, forecasts recovery
+          potential and recommends the highest-value action
+          before the problem becomes expensive.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+
+          <button
+            class="primary"
+            onclick="runSimulation()"
+          >
+
+            ▶ RUN LIVE SIMULATION
+
+          </button>
+
+
+          <button
+            class="secondary"
+            onclick="openLeadForm()"
+          >
+
+            REQUEST EXECUTIVE DEMO →
+
+          </button>
+
+
+        </div>
+
+
+        <div class="trust-line">
+
+          <span>
+            ● ENTERPRISE DEMO
+          </span>
+
+          <span>
+            AI DECISION ENGINE
+          </span>
+
+          <span>
+            REAL-TIME SIMULATION
+          </span>
+
+          <span>
+            EXECUTIVE MODE
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- BUSINESS HEALTH -->
+
+      <div class="health-card">
+
+
+        <div class="health-label">
+          BUSINESS HEALTH
+        </div>
+
+
+        <div
+          class="health-number"
+          id="healthScore"
+        >
+          82
+        </div>
+
+
+        <div class="health-meter">
+
+          <div
+            id="healthBar"
+            style="width:82%"
+          ></div>
+
+        </div>
+
+
+        <div class="health-status">
+
+          <i></i>
+
+          <strong id="healthStatus">
+            SYSTEM STABLE
+          </strong>
+
+        </div>
+
+
+        <div class="health-meta">
+
+          <span>
+            AI CONFIDENCE
+          </span>
+
+          <b id="confidence">
+            92%
+          </b>
+
+        </div>
+
+
+        <div class="health-meta">
+
+          <span>
+            SIGNALS ANALYZED
+          </span>
+
+          <b id="signalsAnalyzed">
+            24
+          </b>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         EXECUTIVE KPI
+    ==================================================== -->
+
+    <section class="kpis">
+
+
+      <div class="kpi">
+
+        <span>
+          REVENUE AT RISK
+        </span>
+
+        <strong id="revenueRisk">
+          $2.40M
+        </strong>
+
+        <small>
+          Estimated exposure
+        </small>
+
+      </div>
+
+
+
+      <div class="kpi opportunity">
+
+        <span>
+          RECOVERABLE REVENUE
+        </span>
+
+        <strong id="recoverable">
+          $730K
+        </strong>
+
+        <small>
+          Recovery opportunity
+        </small>
+
+      </div>
+
+
+
+      <div class="kpi">
+
+        <span>
+          CUSTOMERS AT RISK
+        </span>
+
+        <strong id="customers">
+          18,420
+        </strong>
+
+        <small>
+          Behavioral exposure
+        </small>
+
+      </div>
+
+
+
+      <div class="kpi">
+
+        <span>
+          AI PRIORITY
+        </span>
+
+        <strong id="priority">
+          HIGH
+        </strong>
+
+        <small id="priorityText">
+          Conversion recovery
+        </small>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         LIVE INTELLIGENCE WORKSPACE
+    ==================================================== -->
+
+    <section class="workspace">
+
+
+      <!-- LIVE SIGNAL INTELLIGENCE -->
+
+      <div class="panel">
+
+
+        <div class="panel-head">
+
+
+          <div>
+
+            <label>
+              LIVE SIGNAL INTELLIGENCE
+            </label>
+
+            <h2>
+              Business pressure map
+            </h2>
+
+          </div>
+
+
+          <span class="tag">
+            ● LIVE
+          </span>
+
+
+        </div>
+
+
+
+        <div class="signals">
+
+
+          <!-- CONVERSION -->
+
+          <div class="signal">
+
+            <div>
+
+              <span>
+                CONVERSION
+              </span>
+
+              <strong id="conversionValue">
+                2.84%
+              </strong>
+
+            </div>
+
+
+            <input
+              id="conversion"
+              type="range"
+              min="1"
+              max="6"
+              step="0.01"
+              value="2.84"
+              oninput="updateDashboard()"
+            >
+
+
+            <small id="conversionStatus">
+              HIGH RISK
+            </small>
+
+          </div>
+
+
+
+          <!-- CANCELLATION -->
+
+          <div class="signal">
+
+            <div>
+
+              <span>
+                CANCELLATION
+              </span>
+
+              <strong id="cancelValue">
+                8.7%
+              </strong>
+
+            </div>
+
+
+            <input
+              id="cancellation"
+              type="range"
+              min="0"
+              max="20"
+              step="0.1"
+              value="8.7"
+              oninput="updateDashboard()"
+            >
+
+
+            <small id="cancelStatus">
+              HIGH
+            </small>
+
+          </div>
+
+
+
+          <!-- FULFILLMENT -->
+
+          <div class="signal">
+
+            <div>
+
+              <span>
+                FULFILLMENT
+              </span>
+
+              <strong id="fulfillValue">
+                12.4%
+              </strong>
+
+            </div>
+
+
+            <input
+              id="fulfillment"
+              type="range"
+              min="0"
+              max="30"
+              step="0.1"
+              value="12.4"
+              oninput="updateDashboard()"
+            >
+
+
+            <small id="fulfillStatus">
+              HIGH
+            </small>
+
+          </div>
+
+
+
+          <!-- RESPONSE DELAY -->
+
+          <div class="signal">
+
+            <div>
+
+              <span>
+                RESPONSE DELAY
+              </span>
+
+              <strong id="responseValue">
+                31%
+              </strong>
+
+            </div>
+
+
+            <input
+              id="response"
+              type="range"
+              min="0"
+              max="100"
+              value="31"
+              oninput="updateDashboard()"
+            >
+
+
+            <small id="responseStatus">
+              WATCH
+            </small>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           AI DECISION ENGINE
+      ================================================== -->
+
+      <div class="panel decision">
+
+
+        <div class="panel-head">
+
+
+          <div>
+
+            <label>
+              AI DECISION ENGINE
+            </label>
+
+            <h2>
+              Highest-value next move
+            </h2>
+
+          </div>
+
+
+          <span class="ai">
+            AI
+          </span>
+
+
+        </div>
+
+
+
+        <div class="recommendation">
+
+
+          <div class="bolt">
+            ⚡
+          </div>
+
+
+          <div>
+
+            <strong id="decision">
+              Recover high-intent conversions
+            </strong>
+
+
+            <p id="decisionText">
+
+              Prioritize checkout recovery before
+              increasing acquisition spend.
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="decision-bottom">
+
+
+          <div>
+
+            <span>
+              PRIORITY RECOVERY
+            </span>
+
+            <strong id="priorityRecovery">
+              $150K
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              CONFIDENCE
+            </span>
+
+            <strong id="decisionConfidence">
+              87%
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+
+        <button
+          class="execute"
+          onclick="executeStrategy()"
+        >
+
+          EXECUTE RECOMMENDED STRATEGY →
+
+        </button>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           CEO AI INSIGHT
+      ================================================== -->
+
+      <div class="panel executive-insight">
+
+
+        <div class="panel-head">
+
+
+          <div>
+
+            <label>
+              CEO AI INSIGHT
+            </label>
+
+            <h2>
+              Executive business diagnosis
+            </h2>
+
+          </div>
+
+
+          <span class="ai">
+            AI
+          </span>
+
+
+        </div>
+
+
+
+        <div class="recommendation">
+
+
+          <div class="bolt">
+            ◈
+          </div>
+
+
+          <div>
+
+            <strong id="ceoInsight">
+
+              NEXUS is analyzing current
+              business pressure.
+
+            </strong>
+
+
+            <p id="ceoInsightText">
+
+              Adjust the live signals to generate
+              an executive-level business diagnosis.
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         REVENUE IMPACT INTELLIGENCE
+    ==================================================== -->
+
+    <section class="revenue-impact">
+
+
+      <div class="section-head">
+
+
+        <div>
+
+          <label>
+            REVENUE IMPACT INTELLIGENCE · V11.0
+          </label>
+
+          <h2>
+            Quantify the cost of business pressure.
+          </h2>
+
+          <p>
+
+            NEXUS converts live business signals into
+            estimated revenue exposure, recovery potential
+            and executive opportunity scenarios.
+
+          </p>
+
+        </div>
+
+
+        <span class="live-tag">
+          ● LIVE AI
+        </span>
+
+
+      </div>
+
+
+
+      <div class="impact-grid">
+
+
+        <div class="impact-card">
+
+          <span>
+            ESTIMATED REVENUE LEAKAGE
+          </span>
+
+          <strong id="revenueLeakage">
+            $1.82M
+          </strong>
+
+          <small>
+            Current business exposure
+          </small>
+
+        </div>
+
+
+
+        <div class="impact-card">
+
+          <span>
+            RECOVERY POTENTIAL
+          </span>
+
+          <strong id="recoveryPotential">
+            $716K
+          </strong>
+
+          <small>
+            Estimated recoverable revenue
+          </small>
+
+        </div>
+
+
+
+        <div class="impact-card">
+
+          <span>
+            PROJECTED REVENUE UPLIFT
+          </span>
+
+          <strong id="projectedUplift">
+            +$179K
+          </strong>
+
+          <small>
+            Priority recovery scenario
+          </small>
+
+        </div>
+
+
+
+        <div class="impact-card">
+
+          <span>
+            30-DAY RECOVERY FORECAST
+          </span>
+
+          <strong id="forecastRevenue">
+            $5.37M
+          </strong>
+
+          <small>
+            Estimated protected revenue
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="impact-footer">
+
+
+        <div>
+
+          <span>
+            AI REVENUE OUTLOOK
+          </span>
+
+          <strong id="revenueOutlook">
+            RECOVERY OPPORTUNITY DETECTED
+          </strong>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            MODEL CONFIDENCE
+          </span>
+
+          <strong id="modelConfidence">
+            91%
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         EXECUTIVE ACTION CENTER
+    ==================================================== -->
+
+    <section class="action-center">
+
+
+      <div class="section-head">
+
+
+        <div>
+
+          <label>
+            EXECUTIVE ACTION CENTER
+          </label>
+
+          <h2>
+            What NEXUS recommends doing next.
+          </h2>
+
+          <p>
+            Prioritized actions based on current business pressure.
+          </p>
+
+        </div>
+
+
+        <span class="ai">
+          AI
+        </span>
+
+
+      </div>
+
+
+
+      <div class="action-grid">
+
+
+        <div class="action-card active-action">
+
+
+          <div class="action-number">
+            01
+          </div>
+
+
+          <div class="action-content">
+
+            <span>
+              PRIORITY ACTION
+            </span>
+
+            <h3 id="actionTitle">
+              Recover high-intent customers
+            </h3>
+
+            <p id="actionDescription">
+
+              Address conversion leakage before
+              increasing acquisition spend.
+
+            </p>
+
+          </div>
+
+
+          <div class="action-value">
+
+            <span>
+              EXPECTED IMPACT
+            </span>
+
+            <strong id="actionImpact">
+              +$179K
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+
+        <

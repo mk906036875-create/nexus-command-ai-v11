@@ -1028,7 +1028,255 @@ footer strong{
 
 .modal-box form button{
   margin-top:3px;
-  padding:14px;
+  padding:14px;/* =========================================================
+   NEXUS V11 — MOBILE RESPONSIVE FIX
+========================================================= */
+
+@media (max-width: 768px){
+
+  .app{
+    width:100%;
+    max-width:100%;
+    padding:12px 16px 35px;
+    overflow:hidden;
+  }
+
+  .topbar{
+    min-height:58px;
+    gap:10px;
+  }
+
+  .brand{
+    gap:8px;
+    min-width:0;
+  }
+
+  .logo{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    flex-shrink:0;
+  }
+
+  .brand strong{
+    font-size:10px;
+    white-space:nowrap;
+  }
+
+  .brand span{
+    font-size:6px;
+  }
+
+  .top-right{
+    gap:7px;
+  }
+
+  .live{
+    font-size:7px;
+    white-space:nowrap;
+  }
+
+  .demo-btn{
+    padding:8px 9px;
+    font-size:6px;
+    white-space:nowrap;
+  }
+
+  /* HERO */
+
+  .hero{
+    grid-template-columns:1fr;
+    gap:22px;
+    padding:42px 0 22px;
+  }
+
+  .hero h1{
+    font-size:clamp(38px,11vw,58px);
+    line-height:.94;
+    letter-spacing:-.06em;
+  }
+
+  .hero p{
+    font-size:12px;
+    line-height:1.65;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    gap:9px;
+  }
+
+  .primary,
+  .secondary{
+    width:100%;
+    padding:13px 15px;
+  }
+
+  .trust-line{
+    gap:9px;
+    font-size:6px;
+  }
+
+  /* HEALTH */
+
+  .health-card{
+    width:100%;
+    padding:21px;
+    border-radius:16px;
+  }
+
+  /* KPI */
+
+  .kpis{
+    grid-template-columns:1fr 1fr !important;
+    gap:8px;
+  }
+
+  .kpi{
+    min-width:0;
+    padding:15px 12px !important;
+  }
+
+  .kpi strong{
+    font-size:20px;
+  }
+
+  .kpi span{
+    font-size:7px;
+  }
+
+  .kpi small{
+    font-size:7px;
+  }
+
+  /* WORKSPACE */
+
+  .workspace{
+    grid-template-columns:1fr !important;
+    gap:12px;
+  }
+
+  .panel{
+    width:100%;
+    min-width:0;
+    overflow:hidden;
+  }
+
+  .signals{
+    grid-template-columns:1fr !important;
+    gap:9px;
+  }
+
+  .signal{
+    min-width:0;
+  }
+
+  .decision{
+    width:100%;
+  }
+
+  /* REVENUE IMPACT */
+
+  .impact-grid,
+  .revenue-grid{
+    grid-template-columns:1fr 1fr !important;
+    gap:8px;
+  }
+
+  /* ACTION CENTER */
+
+  .action-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  /* SIMULATION */
+
+  .simulation{
+    grid-template-columns:1fr !important;
+    gap:18px;
+  }
+
+  .sim-control{
+    width:100%;
+  }
+
+  /* CTA */
+
+  .executive-cta{
+    grid-template-columns:1fr !important;
+    gap:18px;
+  }
+
+  .executive-cta button{
+    width:100%;
+  }
+
+  /* PREVENT HORIZONTAL OVERFLOW */
+
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  *{
+    max-width:100%;
+  }
+
+  input[type="range"]{
+    width:100%;
+  }
+
+  footer{
+    flex-direction:column;
+    gap:8px;
+    align-items:flex-start;
+  }
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width:480px){
+
+  .app{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  .top-right .live{
+    display:none;
+  }
+
+  .hero{
+    padding-top:34px;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .health-number{
+    font-size:54px;
+  }
+
+  .kpis{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .kpi strong{
+    font-size:18px;
+  }
+
+  .panel{
+    padding:15px !important;
+  }
+
+  .panel-head h2{
+    font-size:16px;
+  }
+   }
   border:0;
   border-radius:9px;
   color:#02100c;

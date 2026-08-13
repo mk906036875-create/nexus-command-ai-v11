@@ -1,8 +1,7 @@
  /* =========================================================
-   NEXUS COMMAND AI — V11
+   NEXUS COMMAND AI — V11.1
    ENTERPRISE CEO INTELLIGENCE EDITION
-   PREMIUM DARK / AI COMMAND CENTER
-   FINAL RESPONSIVE CSS
+   PREMIUM DARK COMMAND CENTER
 ========================================================= */
 
 *{
@@ -66,6 +65,7 @@ button{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px;
   border-bottom:1px solid rgba(255,255,255,.07);
   position:relative;
 }
@@ -85,6 +85,7 @@ button{
   display:flex;
   align-items:center;
   gap:13px;
+  min-width:0;
 }
 
 .logo{
@@ -92,6 +93,7 @@ button{
   height:46px;
   display:grid;
   place-items:center;
+  flex-shrink:0;
   border-radius:13px;
   color:#00e6b8;
   font-weight:900;
@@ -102,6 +104,9 @@ button{
     rgba(0,230,184,.16),
     rgba(0,230,184,.025)
   );
+  box-shadow:
+    0 0 25px rgba(0,230,184,.08),
+    inset 0 0 20px rgba(0,230,184,.04);
 }
 
 .brand strong{
@@ -129,6 +134,7 @@ button{
   font-size:9px;
   font-weight:900;
   letter-spacing:.12em;
+  white-space:nowrap;
 }
 
 .live i{
@@ -142,15 +148,10 @@ button{
   animation:pulse 1.7s infinite;
 }
 
-@keyframes pulse{
-  0%,100%{
-    opacity:1;
-    transform:scale(1);
-  }
-  50%{
-    opacity:.45;
-    transform:scale(.75);
-  }
+.version{
+  color:#697587;
+  font-size:9px;
+  font-weight:900;
 }
 
 .demo-btn{
@@ -166,6 +167,7 @@ button{
 .demo-btn:hover{
   background:rgba(0,230,184,.13);
   border-color:#00e6b8;
+  transform:translateY(-2px);
 }
 
 /* =========================================================
@@ -314,6 +316,7 @@ button{
 }
 
 .health-meter div{
+  width:82%;
   height:100%;
   border-radius:20px;
   background:#00e6b8;
@@ -341,16 +344,15 @@ button{
 .health-meta{
   display:flex;
   justify-content:space-between;
-  margin-top:7px;
-  font-size:9px;
-}
-
-.health-meta span{
+  align-items:center;
+  margin-top:11px;
   color:#697587;
+  font-size:8px;
+  font-weight:900;
 }
 
 .health-meta b{
-  color:#f5f7fb;
+  color:#00e6b8;
 }
 
 /* =========================================================
@@ -407,6 +409,7 @@ button{
 
 .opportunity strong{
   color:#00e6b8;
+  text-shadow:0 0 20px rgba(0,230,184,.12);
 }
 
 /* =========================================================
@@ -429,7 +432,8 @@ button{
   box-shadow:0 18px 50px rgba(0,0,0,.18);
 }
 
-.panel-head{
+.panel-head,
+.section-head{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
@@ -437,21 +441,27 @@ button{
   margin-bottom:18px;
 }
 
-.panel label{
+.panel label,
+.section-head label,
+.action-center label,
+.what-if label,
+.executive-cta label{
   color:#00e6b8;
   font-size:8px;
   font-weight:900;
   letter-spacing:.14em;
 }
 
-.panel h2{
+.panel h2,
+.section-head h2{
   margin-top:7px;
   font-size:18px;
   font-weight:800;
 }
 
 .tag,
-.ai{
+.ai,
+.live-tag{
   color:#00e6b8;
   border:1px solid rgba(0,230,184,.2);
   background:rgba(0,230,184,.035);
@@ -510,7 +520,7 @@ button{
 }
 
 /* =========================================================
-   DECISION
+   DECISION ENGINE
 ========================================================= */
 
 .recommendation{
@@ -518,773 +528,4 @@ button{
   gap:13px;
   padding:16px;
   border-radius:11px;
-  border:1px solid rgba(0,230,184,.11);
-  background:rgba(0,230,184,.035);
-}
-
-.bolt{
-  flex:0 0 auto;
-  font-size:22px;
-  color:#00e6b8;
-}
-
-.recommendation strong{
-  display:block;
-  font-size:12px;
-  font-weight:900;
-}
-
-.recommendation p{
-  color:#7d899b;
-  font-size:10px;
-  line-height:1.55;
-  margin-top:6px;
-}
-
-.decision-bottom{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin:13px 0;
-}
-
-.decision-bottom div{
-  padding:12px;
-  border-radius:9px;
-  background:#080c13;
-  border:1px solid rgba(255,255,255,.045);
-}
-
-.decision-bottom span{
-  display:block;
-  color:#647084;
-  font-size:7px;
-  font-weight:900;
-  letter-spacing:.1em;
-}
-
-.decision-bottom strong{
-  display:block;
-  color:#00e6b8;
-  font-size:14px;
-  margin-top:5px;
-}
-
-.execute{
-  width:100%;
-  padding:13px;
-  border:0;
-  border-radius:9px;
-  color:#02100c;
-  background:#00e6b8;
-  font-size:9px;
-  font-weight:900;
-}
-
-.execute:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 30px rgba(0,230,184,.18);
-}
-
-/* =========================================================
-   CEO INSIGHT
-========================================================= */
-
-.executive-insight{
-  grid-column:1 / -1;
-}
-
-.executive-insight .recommendation{
-  min-height:78px;
-  align-items:center;
-}
-
-/* =========================================================
-   REVENUE IMPACT
-========================================================= */
-
-.revenue-impact{
-  margin-top:12px;
-  padding:22px;
-  border-radius:16px;
-  border:1px solid rgba(0,230,184,.13);
-  background:
-    radial-gradient(
-      circle at 90% 0%,
-      rgba(0,230,184,.06),
-      transparent 30%
-    ),
-    #080d15;
-}
-
-.section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:15px;
-  margin-bottom:18px;
-}
-
-.section-head label{
-  color:#00e6b8;
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:.14em;
-}
-
-.section-head h2{
-  font-size:19px;
-  margin-top:6px;
-}
-
-.section-head p{
-  color:#758195;
-  font-size:10px;
-  line-height:1.5;
-  margin-top:6px;
-}
-
-.live-tag{
-  color:#00e6b8;
-  border:1px solid rgba(0,230,184,.25);
-  padding:7px 9px;
-  border-radius:7px;
-  font-size:8px;
-  font-weight:900;
-  white-space:nowrap;
-}
-
-.impact-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-}
-
-.impact-card{
-  padding:16px;
-  border-radius:10px;
-  background:#070b12;
-  border:1px solid rgba(255,255,255,.05);
-}
-
-.impact-card span{
-  display:block;
-  color:#637084;
-  font-size:7px;
-  font-weight:900;
-  letter-spacing:.08em;
-}
-
-.impact-card strong{
-  display:block;
-  font-size:20px;
-  margin-top:8px;
-}
-
-.impact-card:nth-child(2) strong,
-.impact-card:nth-child(3) strong{
-  color:#00e6b8;
-}
-
-.impact-card small{
-  display:block;
-  color:#566174;
-  font-size:8px;
-  margin-top:4px;
-}
-
-.impact-footer{
-  display:grid;
-  grid-template-columns:1fr 180px;
-  gap:10px;
-  margin-top:10px;
-}
-
-.impact-footer > div{
-  padding:12px 15px;
-  border-radius:9px;
-  background:#070b12;
-  border:1px solid rgba(255,255,255,.05);
-}
-
-.impact-footer span{
-  color:#637084;
-  font-size:7px;
-  font-weight:900;
-}
-
-.impact-footer strong{
-  display:block;
-  color:#00e6b8;
-  font-size:10px;
-  margin-top:5px;
-}
-
-/* =========================================================
-   EXECUTIVE ACTION CENTER
-========================================================= */
-
-.action-center{
-  margin-top:12px;
-  padding:22px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.065);
-  background:linear-gradient(145deg,#0a1018,#080c13);
-}
-
-.action-grid{
-  display:grid;
-  gap:10px;
-}
-
-.action-card{
-  display:grid;
-  grid-template-columns:38px 1fr auto;
-  gap:13px;
-  align-items:center;
-  padding:14px;
-  border-radius:11px;
-  background:#070b12;
-  border:1px solid rgba(255,255,255,.05);
-  transition:.25s ease;
-}
-
-.action-card:hover{
-  border-color:rgba(0,230,184,.22);
-  transform:translateY(-1px);
-}
-
-.active-action{
-  border-color:rgba(0,230,184,.16);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,230,184,.045),
-      #070b12
-    );
-}
-
-.action-number{
-  width:32px;
-  height:32px;
-  display:grid;
-  place-items:center;
-  border-radius:8px;
-  color:#00e6b8;
-  background:rgba(0,230,184,.07);
-  border:1px solid rgba(0,230,184,.14);
-  font-size:10px;
-  font-weight:900;
-}
-
-.action-content span,
-.action-value span{
-  display:block;
-  color:#647084;
-  font-size:7px;
-  font-weight:900;
-  letter-spacing:.1em;
-}
-
-.action-content h3{
-  margin-top:5px;
-  font-size:12px;
-  font-weight:900;
-}
-
-.action-content p{
-  color:#6f7b8e;
-  font-size:9px;
-  margin-top:4px;
-  line-height:1.45;
-}
-
-.action-value{
-  text-align:right;
-}
-
-.action-value strong{
-  display:block;
-  color:#00e6b8;
-  font-size:11px;
-  margin-top:5px;
-  white-space:nowrap;
-}
-
-/* =========================================================
-   SIMULATION
-========================================================= */
-
-.simulation{
-  margin-top:12px;
-  padding:23px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.065);
-  background:
-    radial-gradient(
-      circle at 10% 50%,
-      rgba(0,230,184,.055),
-      transparent 30%
-    ),
-    #080d15;
-}
-
-.simulation label{
-  color:#00e6b8;
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:.14em;
-}
-
-.simulation h2{
-  margin:8px 0;
-  font-size:21px;
-}
-
-.simulation p{
-  max-width:560px;
-  color:#768196;
-  font-size:10px;
-  line-height:1.6;
-}
-
-.sim-control{
-  padding:17px;
-  border-radius:11px;
-  border:1px solid rgba(255,255,255,.06);
-  background:#070b12;
-}
-
-.sim-top{
-  display:flex;
-  justify-content:space-between;
-}
-
-.sim-top span{
-  color:#647084;
-  font-size:8px;
-  font-weight:900;
-}
-
-.sim-top strong{
-  color:#00e6b8;
-  font-size:14px;
-}
-
-.sim-control input{
-  width:100%;
-  margin:18px 0;
-  accent-color:#00e6b8;
-}
-
-.sim-result{
-  display:flex;
-  align-items:baseline;
-  gap:7px;
-}
-
-.sim-result span{
-  color:#647084;
-  font-size:8px;
-  font-weight:900;
-}
-
-.sim-result strong{
-  font-size:38px;
-  font-weight:900;
-}
-
-.sim-result small{
-  color:#647084;
-}
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.executive-cta{
-  margin-top:12px;
-  padding:25px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  border-radius:16px;
-  border:1px solid rgba(0,230,184,.16);
-  background:
-    linear-gradient(
-      120deg,
-      rgba(0,230,184,.075),
-      rgba(8,14,22,.9)
-    );
-}
-
-.executive-cta label{
-  color:#00e6b8;
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:.14em;
-}
-
-.executive-cta h2{
-  max-width:760px;
-  margin:7px 0;
-  font-size:25px;
-}
-
-.executive-cta p{
-  color:#758195;
-  font-size:10px;
-}
-
-.executive-cta button{
-  flex:0 0 auto;
-  padding:15px 20px;
-  border:0;
-  border-radius:9px;
-  color:#02100c;
-  background:#00e6b8;
-  font-size:9px;
-  font-weight:900;
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  padding:20px 0 6px;
-  color:#505d70;
-  font-size:8px;
-}
-
-footer strong{
-  color:#788497;
-}
-
-/* =========================================================
-   MODAL
-========================================================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  display:none;
-  place-items:center;
-  padding:20px;
-  background:rgba(0,0,0,.82);
-  backdrop-filter:blur(14px);
-}
-
-.modal.show{
-  display:grid;
-}
-
-.modal-box{
-  position:relative;
-  width:min(460px,100%);
-  padding:29px;
-  border-radius:19px;
-  border:1px solid rgba(0,230,184,.2);
-  background:#0b111a;
-  box-shadow:0 30px 100px rgba(0,0,0,.65);
-}
-
-.close{
-  position:absolute;
-  top:11px;
-  right:14px;
-  border:0;
-  background:none;
-  color:#758195;
-  font-size:27px;
-}
-
-.modal-box form{
-  display:grid;
-  gap:10px;
-}
-
-.modal-box input,
-.modal-box select{
-  width:100%;
-  padding:13px;
-  outline:none;
-  color:#fff;
-  background:#070b12;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:9px;
-}
-
-.modal-box input:focus,
-.modal-box select:focus{
-  border-color:#00e6b8;
-}
-
-.modal-box form button{
-  margin-top:3px;
-  padding:14px;
-  border:0;
-  border-radius:9px;
-  color:#02100c;
-  background:#00e6b8;
-  font-weight:900;
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:768px){
-
-  .app{
-    width:100%;
-    max-width:100%;
-    padding:10px 12px 35px;
-  }
-
-  .topbar{
-    min-height:58px;
-  }
-
-  .logo{
-    width:36px;
-    height:36px;
-  }
-
-  .brand strong{
-    font-size:10px;
-  }
-
-  .brand span{
-    font-size:5.5px;
-  }
-
-  .top-right{
-    gap:6px;
-  }
-
-  .live{
-    font-size:6px;
-  }
-
-  .demo-btn{
-    padding:8px 8px;
-    font-size:6px;
-  }
-
-  .hero{
-    grid-template-columns:1fr;
-    gap:20px;
-    padding:38px 0 22px;
-  }
-
-  .hero h1{
-    font-size:clamp(38px,11vw,55px);
-    line-height:.95;
-  }
-
-  .hero p{
-    font-size:11px;
-    line-height:1.65;
-  }
-
-  .hero-actions{
-    flex-direction:row;
-    gap:8px;
-  }
-
-  .primary,
-  .secondary{
-    flex:1;
-    padding:12px 8px;
-    font-size:7px;
-  }
-
-  .trust-line{
-    gap:7px;
-    font-size:5.5px;
-  }
-
-  .health-card{
-    padding:20px;
-  }
-
-  .health-number{
-    font-size:55px;
-  }
-
-  .kpis{
-    grid-template-columns:1fr 1fr;
-    gap:8px;
-  }
-
-  .kpi{
-    min-height:100px;
-    padding:14px 11px;
-  }
-
-  .kpi strong{
-    font-size:19px;
-  }
-
-  .kpi span{
-    font-size:6px;
-  }
-
-  .kpi small{
-    font-size:6px;
-  }
-
-  .workspace{
-    grid-template-columns:1fr;
-    gap:10px;
-  }
-
-  .panel{
-    padding:15px;
-  }
-
-  .signals{
-    grid-template-columns:1fr 1fr;
-    gap:8px;
-  }
-
-  .signal{
-    padding:11px;
-  }
-
-  .signal strong{
-    font-size:13px;
-  }
-
-  .signal input{
-    margin:11px 0 6px;
-  }
-
-  .impact-grid{
-    grid-template-columns:1fr 1fr;
-    gap:7px;
-  }
-
-  .impact-card{
-    padding:12px 10px;
-  }
-
-  .impact-card strong{
-    font-size:17px;
-  }
-
-  .impact-footer{
-    grid-template-columns:1fr 110px;
-  }
-
-  .action-card{
-    grid-template-columns:34px 1fr;
-    gap:10px;
-  }
-
-  .action-value{
-    grid-column:2;
-    text-align:left;
-  }
-
-  .action-number{
-    width:30px;
-    height:30px;
-  }
-
-  .simulation{
-    grid-template-columns:1fr;
-    gap:16px;
-  }
-
-  .executive-cta{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .executive-cta h2{
-    font-size:21px;
-  }
-
-  .executive-cta button{
-    width:100%;
-  }
-
-  footer{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media(max-width:480px){
-
-  .app{
-    padding-left:10px;
-    padding-right:10px;
-  }
-
-  .top-right .live{
-    display:none;
-  }
-
-  .hero{
-    padding-top:32px;
-  }
-
-  .hero h1{
-    font-size:39px;
-  }
-
-  .hero-actions{
-    flex-direction:column;
-  }
-
-  .primary,
-  .secondary{
-    width:100%;
-  }
-
-  .health-number{
-    font-size:52px;
-  }
-
-  .kpis{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .panel h2{
-    font-size:15px;
-  }
-
-  .signals{
-    grid-template-columns:1fr;
-  }
-
-  .impact-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .impact-footer{
-    grid-template-columns:1fr;
-  }
-
-  .action-card{
-    grid-template-columns:32px 1fr;
-  }
-
-  .action-content h3{
-    fon
+  border:1px solid rgba

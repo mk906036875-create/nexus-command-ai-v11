@@ -1,12 +1,16 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="NEXUS COMMAND AI — Enterprise Autonomous Decision Intelligence Platform for revenue risk detection, recovery forecasting and executive decision support.">
+<meta
+name="description"
+content="NEXUS COMMAND AI — Enterprise Autonomous Decision Intelligence Platform for revenue risk detection, recovery forecasting and executive decision support."
+>
 
 <meta name="theme-color" content="#05070c">
 
@@ -16,23 +20,25 @@ content="NEXUS COMMAND AI — Enterprise Autonomous Decision Intelligence Platfo
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com"
-crossorigin>
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+rel="stylesheet"
+>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
 <div class="app">
-
-<!-- =====================================================
-TOP BAR
-====================================================== -->
 
 <header class="topbar">
 
@@ -52,6 +58,7 @@ ENTERPRISE AUTONOMOUS DECISION INTELLIGENCE
 
 </div>
 
+
 <div class="top-right">
 
 <div class="live">
@@ -63,7 +70,8 @@ LIVE INTELLIGENCE
 
 <button
 class="demo-btn"
-onclick="openLeadForm()">
+onclick="openLeadForm()"
+>
 REQUEST EXECUTIVE DEMO →
 </button>
 
@@ -72,16 +80,8 @@ REQUEST EXECUTIVE DEMO →
 </header>
 
 
-<!-- =====================================================
-MAIN
-====================================================== -->
-
 <main>
 
-
-<!-- =====================================================
-HERO
-====================================================== -->
 
 <section class="hero">
 
@@ -103,21 +103,25 @@ potential and recommends the highest-value action
 before the problem becomes expensive.
 </p>
 
+
 <div class="hero-actions">
 
 <button
 class="primary"
-onclick="runSimulation()">
+onclick="runSimulation()"
+>
 ▶ RUN LIVE SIMULATION
 </button>
 
 <button
 class="secondary"
-onclick="openLeadForm()">
+onclick="openLeadForm()"
+>
 REQUEST EXECUTIVE DEMO →
 </button>
 
 </div>
+
 
 <div class="trust-line">
 
@@ -131,8 +135,6 @@ REQUEST EXECUTIVE DEMO →
 </div>
 
 
-<!-- BUSINESS HEALTH -->
-
 <div class="health-card">
 
 <div class="health-label">
@@ -141,7 +143,8 @@ BUSINESS HEALTH
 
 <div
 class="health-number"
-id="healthScore">
+id="healthScore"
+>
 82
 </div>
 
@@ -149,8 +152,8 @@ id="healthScore">
 
 <div
 id="healthBar"
-style="width:82%">
-</div>
+style="width:82%"
+></div>
 
 </div>
 
@@ -185,23 +188,15 @@ SYSTEM STABLE
 </section>
 
 
-<!-- =====================================================
-EXECUTIVE KPI
-====================================================== -->
-
 <section class="kpis">
 
 <div class="kpi">
 
 <span>REVENUE AT RISK</span>
 
-<strong id="revenueRisk">
-$2.40M
-</strong>
+<strong id="revenueRisk">$2.40M</strong>
 
-<small>
-Estimated exposure
-</small>
+<small>Estimated exposure</small>
 
 </div>
 
@@ -210,13 +205,9 @@ Estimated exposure
 
 <span>RECOVERABLE REVENUE</span>
 
-<strong id="recoverable">
-$730K
-</strong>
+<strong id="recoverable">$730K</strong>
 
-<small>
-Recovery opportunity
-</small>
+<small>Recovery opportunity</small>
 
 </div>
 
@@ -225,13 +216,9 @@ Recovery opportunity
 
 <span>CUSTOMERS AT RISK</span>
 
-<strong id="customers">
-18,420
-</strong>
+<strong id="customers">18,420</strong>
 
-<small>
-Behavioral exposure
-</small>
+<small>Behavioral exposure</small>
 
 </div>
 
@@ -240,9 +227,7 @@ Behavioral exposure
 
 <span>AI PRIORITY</span>
 
-<strong id="priority">
-HIGH
-</strong>
+<strong id="priority">HIGH</strong>
 
 <small id="priorityText">
 Conversion recovery
@@ -253,14 +238,8 @@ Conversion recovery
 </section>
 
 
-<!-- =====================================================
-LIVE INTELLIGENCE WORKSPACE
-====================================================== -->
-
 <section class="workspace">
 
-
-<!-- LIVE SIGNAL INTELLIGENCE -->
 
 <div class="panel">
 
@@ -282,17 +261,13 @@ LIVE INTELLIGENCE WORKSPACE
 <div class="signals">
 
 
-<!-- CONVERSION -->
-
 <div class="signal">
 
 <div>
 
 <span>CONVERSION</span>
 
-<strong id="conversionValue">
-2.84%
-</strong>
+<strong id="conversionValue">2.84%</strong>
 
 </div>
 
@@ -303,7 +278,8 @@ min="1"
 max="6"
 step="0.01"
 value="2.84"
-oninput="updateDashboard()">
+oninput="updateDashboard()"
+>
 
 <small id="conversionStatus">
 HIGH RISK
@@ -312,17 +288,13 @@ HIGH RISK
 </div>
 
 
-<!-- CANCELLATION -->
-
 <div class="signal">
 
 <div>
 
 <span>CANCELLATION</span>
 
-<strong id="cancelValue">
-8.7%
-</strong>
+<strong id="cancelValue">8.7%</strong>
 
 </div>
 
@@ -333,7 +305,8 @@ min="0"
 max="20"
 step="0.1"
 value="8.7"
-oninput="updateDashboard()">
+oninput="updateDashboard()"
+>
 
 <small id="cancelStatus">
 HIGH
@@ -342,17 +315,13 @@ HIGH
 </div>
 
 
-<!-- FULFILLMENT -->
-
 <div class="signal">
 
 <div>
 
 <span>FULFILLMENT</span>
 
-<strong id="fulfillValue">
-12.4%
-</strong>
+<strong id="fulfillValue">12.4%</strong>
 
 </div>
 
@@ -363,7 +332,8 @@ min="0"
 max="30"
 step="0.1"
 value="12.4"
-oninput="updateDashboard()">
+oninput="updateDashboard()"
+>
 
 <small id="fulfillStatus">
 HIGH
@@ -372,17 +342,13 @@ HIGH
 </div>
 
 
-<!-- RESPONSE DELAY -->
-
 <div class="signal">
 
 <div>
 
 <span>RESPONSE DELAY</span>
 
-<strong id="responseValue">
-31%
-</strong>
+<strong id="responseValue">31%</strong>
 
 </div>
 
@@ -392,7 +358,8 @@ type="range"
 min="0"
 max="100"
 value="31"
-oninput="updateDashboard()">
+oninput="updateDashboard()"
+>
 
 <small id="responseStatus">
 WATCH
@@ -404,10 +371,6 @@ WATCH
 
 </div>
 
-
-<!-- =====================================================
-AI DECISION ENGINE
-====================================================== -->
 
 <div class="panel decision">
 
@@ -452,19 +415,16 @@ increasing acquisition spend.
 
 <span>PRIORITY RECOVERY</span>
 
-<strong id="priorityRecovery">
-$150K
-</strong>
+<strong id="priorityRecovery">$150K</strong>
 
 </div>
+
 
 <div>
 
 <span>CONFIDENCE</span>
 
-<strong id="decisionConfidence">
-87%
-</strong>
+<strong id="decisionConfidence">87%</strong>
 
 </div>
 
@@ -473,18 +433,13 @@ $150K
 
 <button
 class="execute"
-onclick="executeStrategy()">
-
+onclick="executeStrategy()"
+>
 EXECUTE RECOMMENDED STRATEGY →
-
 </button>
 
 </div>
 
-
-<!-- =====================================================
-CEO AI INSIGHT
-====================================================== -->
 
 <div class="panel executive-insight">
 
@@ -527,10 +482,6 @@ an executive-level business diagnosis.
 </section>
 
 
-<!-- =====================================================
-REVENUE IMPACT INTELLIGENCE
-====================================================== -->
-
 <section class="revenue-impact">
 
 <div class="section-head">
@@ -562,14 +513,11 @@ and executive opportunity scenarios.
 
 <div class="impact-grid">
 
-
 <div class="impact-card">
 
 <span>ESTIMATED REVENUE LEAKAGE</span>
 
-<strong id="revenueLeakage">
-$1.82M
-</strong>
+<strong id="revenueLeakage">$1.82M</strong>
 
 <small>Current business exposure</small>
 
@@ -580,9 +528,7 @@ $1.82M
 
 <span>RECOVERY POTENTIAL</span>
 
-<strong id="recoveryPotential">
-$716K
-</strong>
+<strong id="recoveryPotential">$716K</strong>
 
 <small>Estimated recoverable revenue</small>
 
@@ -593,9 +539,7 @@ $716K
 
 <span>PROJECTED REVENUE UPLIFT</span>
 
-<strong id="projectedUplift">
-+$179K
-</strong>
+<strong id="projectedUplift">+$179K</strong>
 
 <small>Priority recovery scenario</small>
 
@@ -606,9 +550,7 @@ $716K
 
 <span>30-DAY RECOVERY FORECAST</span>
 
-<strong id="forecastRevenue">
-$5.37M
-</strong>
+<strong id="forecastRevenue">$5.37M</strong>
 
 <small>Estimated protected revenue</small>
 
@@ -629,13 +571,12 @@ RECOVERY OPPORTUNITY DETECTED
 
 </div>
 
+
 <div>
 
 <span>MODEL CONFIDENCE</span>
 
-<strong id="modelConfidence">
-91%
-</strong>
+<strong id="modelConfidence">91%</strong>
 
 </div>
 
@@ -643,10 +584,6 @@ RECOVERY OPPORTUNITY DETECTED
 
 </section>
 
-
-<!-- =====================================================
-EXECUTIVE ACTION CENTER
-====================================================== -->
 
 <section class="action-center">
 
@@ -674,13 +611,9 @@ Prioritized actions based on current business pressure.
 <div class="action-grid">
 
 
-<!-- ACTION 01 -->
-
 <div class="action-card active-action">
 
-<div class="action-number">
-01
-</div>
+<div class="action-number">01</div>
 
 <div class="action-content">
 
@@ -701,30 +634,22 @@ increasing acquisition spend.
 
 <span>EXPECTED IMPACT</span>
 
-<strong id="actionImpact">
-+$179K
-</strong>
+<strong id="actionImpact">+$179K</strong>
 
 </div>
 
 </div>
 
-
-<!-- ACTION 02 -->
 
 <div class="action-card">
 
-<div class="action-number">
-02
-</div>
+<div class="action-number">02</div>
 
 <div class="action-content">
 
 <span>OPTIMIZATION</span>
 
-<h3>
-Reduce cancellation pressure
-</h3>
+<h3>Reduce cancellation pressure</h3>
 
 <p>
 Trigger retention workflows for
@@ -737,30 +662,22 @@ customers showing cancellation intent.
 
 <span>OPPORTUNITY</span>
 
-<strong>
-+$96K
-</strong>
+<strong>+$96K</strong>
 
 </div>
 
 </div>
 
-
-<!-- ACTION 03 -->
 
 <div class="action-card">
 
-<div class="action-number">
-03
-</div>
+<div class="action-number">03</div>
 
 <div class="action-content">
 
 <span>OPERATIONS</span>
 
-<h3>
-Stabilize fulfillment performance
-</h3>
+<h3>Stabilize fulfillment performance</h3>
 
 <p>
 Reduce service friction before
@@ -773,9 +690,7 @@ scaling additional demand.
 
 <span>IMPACT</span>
 
-<strong>
-+$72K
-</strong>
+<strong>+$72K</strong>
 
 </div>
 
@@ -785,10 +700,6 @@ scaling additional demand.
 
 </section>
 
-
-<!-- =====================================================
-WHAT-IF SIMULATION
-====================================================== -->
 
 <section class="what-if">
 
@@ -814,9 +725,7 @@ the estimated business health improve in real time.
 
 <span>TARGET CONVERSION</span>
 
-<strong id="targetConversion">
-3.21%
-</strong>
+<strong id="targetConversion">3.21%</strong>
 
 </div>
 
@@ -827,7 +736,8 @@ min="2"
 max="6"
 step="0.01"
 value="3.21"
-oninput="runWhatIf()">
+oninput="runWhatIf()"
+>
 
 
 <div class="projection">
@@ -836,16 +746,16 @@ oninput="runWhatIf()">
 
 <span>PROJECTED HEALTH</span>
 
-<strong id="projectedHealth">
-87
-</strong>
+<strong id="projectedHealth">87</strong>
 
 <small>/100</small>
 
 </div>
 
-<div class="projection-status"
-id="projectionStatus">
+<div
+class="projection-status"
+id="projectionStatus"
+>
 IMPROVEMENT DETECTED
 </div>
 
@@ -856,17 +766,11 @@ IMPROVEMENT DETECTED
 </section>
 
 
-<!-- =====================================================
-EXECUTIVE CTA
-====================================================== -->
-
 <section class="executive-cta">
 
 <div>
 
-<label>
-EXECUTIVE INTELLIGENCE
-</label>
+<label>EXECUTIVE INTELLIGENCE</label>
 
 <h2>
 See what NEXUS could uncover inside your business.
@@ -882,18 +786,13 @@ static reporting to autonomous decision intelligence.
 
 <button
 class="primary"
-onclick="openLeadForm()">
-
+onclick="openLeadForm()"
+>
 REQUEST EXECUTIVE DEMO →
-
 </button>
 
 </section>
 
-
-<!-- =====================================================
-FOOTER
-====================================================== -->
 
 <footer class="footer">
 
@@ -907,31 +806,33 @@ Executive Decision Intelligence Platform · 2026
 
 </footer>
 
+
 </main>
 
 </div>
 
 
-<!-- =====================================================
-LEAD / DEMO MODAL
-====================================================== -->
-
 <div
 class="modal"
 id="leadModal"
-aria-hidden="true">
+aria-hidden="true"
+>
 
-<div class="modal-overlay"
-onclick="closeLeadForm()">
-</div>
+<div
+class="modal-overlay"
+onclick="closeLeadForm()"
+></div>
+
 
 <div class="modal-box">
 
 <button
 class="modal-close"
-onclick="closeLeadForm()">
+onclick="closeLeadForm()"
+>
 ×
 </button>
+
 
 <label>EXECUTIVE ACCESS</label>
 
@@ -947,26 +848,18 @@ recovery opportunities and high-value actions.
 
 <form
 id="leadForm"
-onsubmit="submitLead(event)">
+onsubmit="submitLead(event)"
+>
 
 <input
 type="text"
 id="leadName"
 placeholder="Your name"
-required>
+required
+>
+
 
 <input
 type="email"
 id="leadEmail"
-placeholder="Business email"
-required>
-
-<input
-type="text"
-id="lead</main>
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+placeholder="Business

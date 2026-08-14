@@ -5,7 +5,7 @@
 ## Enterprise Autonomous Decision Intelligence Engine
 
 ### Turning Business Signals into Decisions, Actions & Growth
-
+file_00000000d250820bad688ae696dcef1c.png
 **AI-powered command center for business intelligence, risk monitoring, opportunity detection and autonomous decision support.**
 
 </p>

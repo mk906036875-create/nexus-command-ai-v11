@@ -1,922 +1,1112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="NEXUS COMMAND AI — Enterprise Autonomous Decision Intelligence Platform for revenue risk detection, recovery forecasting and executive decision support.">
 
-<meta
-name="description"
-content="NEXUS COMMAND AI — Enterprise Autonomous Decision Intelligence Platform for revenue risk detection, recovery forecasting and executive decision support."
->
+  <meta name="theme-color" content="#05070c">
+  <meta name="robots" content="index, follow">
 
-<meta name="theme-color" content="#05070c">
+  <title>NEXUS COMMAND AI — V11.1 Enterprise Intelligence</title>
 
-<meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<title>NEXUS COMMAND AI — V11.1 Enterprise Intelligence</title>
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
-
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-rel="stylesheet"
->
-
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 <div class="app">
 
-<header class="topbar">
+  <!-- ================= TOP BAR ================= -->
 
-<div class="brand">
+  <header class="topbar">
 
-<div class="logo">NX</div>
+    <div class="brand">
 
-<div class="brand-copy">
+      <div class="logo">NX</div>
 
-<strong>NEXUS COMMAND AI</strong>
+      <div class="brand-copy">
 
-<span>
-ENTERPRISE AUTONOMOUS DECISION INTELLIGENCE
-</span>
+        <strong>NEXUS COMMAND AI</strong>
 
-</div>
+        <span>
+          ENTERPRISE AUTONOMOUS DECISION INTELLIGENCE
+        </span>
 
-</div>
+      </div>
 
+    </div>
 
-<div class="top-right">
+    <div class="top-right">
 
-<div class="live">
-<i></i>
-LIVE INTELLIGENCE
-</div>
+      <div class="live">
+        <i></i>
+        LIVE INTELLIGENCE
+      </div>
 
-<div class="version">V11.1</div>
+      <div class="version">V11.1</div>
 
-<button
-class="demo-btn"
-onclick="openLeadForm()"
->
-REQUEST EXECUTIVE DEMO →
-</button>
+      <button
+        class="demo-btn"
+        type="button"
+        onclick="openLeadForm()">
+        REQUEST EXECUTIVE DEMO →
+      </button>
 
-</div>
+    </div>
 
-</header>
+  </header>
 
 
-<main>
+  <!-- ================= MAIN ================= -->
 
+  <main>
 
-<section class="hero">
+    <!-- ================= HERO ================= -->
 
-<div class="hero-copy">
+    <section class="hero">
 
-<div class="eyebrow">
-AUTONOMOUS REVENUE INTELLIGENCE · V11.1
-</div>
+      <div class="hero-copy">
 
-<h1>
-Turn business signals into
-<span>executive decisions.</span>
-</h1>
+        <div class="eyebrow">
+          AUTONOMOUS REVENUE INTELLIGENCE · V11.1
+        </div>
 
-<p>
-NEXUS continuously analyzes business pressure,
-identifies revenue exposure, forecasts recovery
-potential and recommends the highest-value action
-before the problem becomes expensive.
-</p>
+        <h1>
+          Turn business signals into
+          <span>executive decisions.</span>
+        </h1>
 
+        <p>
+          NEXUS continuously analyzes business pressure,
+          identifies revenue exposure, forecasts recovery
+          potential and recommends the highest-value action
+          before the problem becomes expensive.
+        </p>
 
-<div class="hero-actions">
+        <div class="hero-actions">
 
-<button
-class="primary"
-onclick="runSimulation()"
->
-▶ RUN LIVE SIMULATION
-</button>
+          <button
+            class="primary"
+            type="button"
+            onclick="runSimulation()">
+            ▶ RUN LIVE SIMULATION
+          </button>
 
-<button
-class="secondary"
-onclick="openLeadForm()"
->
-REQUEST EXECUTIVE DEMO →
-</button>
+          <button
+            class="secondary"
+            type="button"
+            onclick="openLeadForm()">
+            REQUEST EXECUTIVE DEMO →
+          </button>
 
-</div>
+        </div>
 
+        <div class="trust-line">
 
-<div class="trust-line">
+          <span>● ENTERPRISE DEMO</span>
+          <span>AI DECISION ENGINE</span>
+          <span>REAL-TIME SIMULATION</span>
+          <span>EXECUTIVE MODE</span>
 
-<span>● ENTERPRISE DEMO</span>
-<span>AI DECISION ENGINE</span>
-<span>REAL-TIME SIMULATION</span>
-<span>EXECUTIVE MODE</span>
+        </div>
 
-</div>
+      </div>
 
-</div>
 
+      <!-- ================= BUSINESS HEALTH ================= -->
 
-<div class="health-card">
+      <div class="health-card">
 
-<div class="health-label">
-BUSINESS HEALTH
-</div>
+        <div class="health-label">
+          BUSINESS HEALTH
+        </div>
 
-<div
-class="health-number"
-id="healthScore"
->
-82
-</div>
+        <div
+          class="health-number"
+          id="healthScore">
+          82
+        </div>
 
-<div class="health-meter">
+        <div class="health-meter">
 
-<div
-id="healthBar"
-style="width:82%"
-></div>
+          <div
+            id="healthBar"
+            style="width:82%">
+          </div>
 
-</div>
+        </div>
 
-<div class="health-status">
+        <div class="health-status">
 
-<i></i>
+          <i></i>
 
-<strong id="healthStatus">
-SYSTEM STABLE
-</strong>
+          <strong id="healthStatus">
+            SYSTEM STABLE
+          </strong>
 
-</div>
+        </div>
 
-<div class="health-meta">
+        <div class="health-meta">
 
-<span>AI CONFIDENCE</span>
+          <span>AI CONFIDENCE</span>
 
-<b id="confidence">92%</b>
+          <b id="confidence">
+            92%
+          </b>
 
-</div>
+        </div>
 
-<div class="health-meta">
+        <div class="health-meta">
 
-<span>SIGNALS ANALYZED</span>
+          <span>SIGNALS ANALYZED</span>
 
-<b id="signalsAnalyzed">24</b>
+          <b id="signalsAnalyzed">
+            24
+          </b>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </section>
 
 
-<section class="kpis">
+    <!-- ================= KPI ================= -->
 
-<div class="kpi">
+    <section class="kpis">
 
-<span>REVENUE AT RISK</span>
+      <div class="kpi">
 
-<strong id="revenueRisk">$2.40M</strong>
+        <span>REVENUE AT RISK</span>
 
-<small>Estimated exposure</small>
+        <strong id="revenueRisk">
+          $2.40M
+        </strong>
 
-</div>
+        <small>
+          Estimated exposure
+        </small>
 
+      </div>
 
-<div class="kpi opportunity">
 
-<span>RECOVERABLE REVENUE</span>
+      <div class="kpi opportunity">
 
-<strong id="recoverable">$730K</strong>
+        <span>RECOVERABLE REVENUE</span>
 
-<small>Recovery opportunity</small>
+        <strong id="recoverable">
+          $730K
+        </strong>
 
-</div>
+        <small>
+          Recovery opportunity
+        </small>
 
+      </div>
 
-<div class="kpi">
 
-<span>CUSTOMERS AT RISK</span>
+      <div class="kpi">
 
-<strong id="customers">18,420</strong>
+        <span>CUSTOMERS AT RISK</span>
 
-<small>Behavioral exposure</small>
+        <strong id="customers">
+          18,420
+        </strong>
 
-</div>
+        <small>
+          Behavioral exposure
+        </small>
 
+      </div>
 
-<div class="kpi">
 
-<span>AI PRIORITY</span>
+      <div class="kpi">
 
-<strong id="priority">HIGH</strong>
+        <span>AI PRIORITY</span>
 
-<small id="priorityText">
-Conversion recovery
-</small>
+        <strong id="priority">
+          HIGH
+        </strong>
 
-</div>
+        <small id="priorityText">
+          Conversion recovery
+        </small>
 
-</section>
+      </div>
 
+    </section>
 
-<section class="workspace">
 
+    <!-- ================= WORKSPACE ================= -->
 
-<div class="panel">
+    <section class="workspace">
 
-<div class="panel-head">
 
-<div>
+      <!-- ================= LIVE SIGNALS ================= -->
 
-<label>LIVE SIGNAL INTELLIGENCE</label>
+      <div class="panel">
 
-<h2>Business pressure map</h2>
+        <div class="panel-head">
 
-</div>
+          <div>
 
-<span class="tag">● LIVE</span>
+            <label>
+              LIVE SIGNAL INTELLIGENCE
+            </label>
 
-</div>
+            <h2>
+              Business pressure map
+            </h2>
 
+          </div>
 
-<div class="signals">
+          <span class="tag">
+            ● LIVE
+          </span>
 
+        </div>
 
-<div class="signal">
 
-<div>
+        <div class="signals">
 
-<span>CONVERSION</span>
 
-<strong id="conversionValue">2.84%</strong>
+          <!-- CONVERSION -->
 
-</div>
+          <div class="signal">
 
-<input
-id="conversion"
-type="range"
-min="1"
-max="6"
-step="0.01"
-value="2.84"
-oninput="updateDashboard()"
->
+            <div>
 
-<small id="conversionStatus">
-HIGH RISK
-</small>
+              <span>
+                CONVERSION
+              </span>
 
-</div>
+              <strong id="conversionValue">
+                2.84%
+              </strong>
 
+            </div>
 
-<div class="signal">
+            <input
+              id="conversion"
+              type="range"
+              min="1"
+              max="6"
+              step="0.01"
+              value="2.84"
+              oninput="updateDashboard()">
 
-<div>
+            <small id="conversionStatus">
+              HIGH RISK
+            </small>
 
-<span>CANCELLATION</span>
+          </div>
 
-<strong id="cancelValue">8.7%</strong>
 
-</div>
+          <!-- CANCELLATION -->
 
-<input
-id="cancellation"
-type="range"
-min="0"
-max="20"
-step="0.1"
-value="8.7"
-oninput="updateDashboard()"
->
+          <div class="signal">
 
-<small id="cancelStatus">
-HIGH
-</small>
+            <div>
 
-</div>
+              <span>
+                CANCELLATION
+              </span>
 
+              <strong id="cancelValue">
+                8.7%
+              </strong>
 
-<div class="signal">
+            </div>
 
-<div>
+            <input
+              id="cancellation"
+              type="range"
+              min="0"
+              max="20"
+              step="0.1"
+              value="8.7"
+              oninput="updateDashboard()">
 
-<span>FULFILLMENT</span>
+            <small id="cancelStatus">
+              HIGH
+            </small>
 
-<strong id="fulfillValue">12.4%</strong>
+          </div>
 
-</div>
 
-<input
-id="fulfillment"
-type="range"
-min="0"
-max="30"
-step="0.1"
-value="12.4"
-oninput="updateDashboard()"
->
+          <!-- FULFILLMENT -->
 
-<small id="fulfillStatus">
-HIGH
-</small>
+          <div class="signal">
 
-</div>
+            <div>
 
+              <span>
+                FULFILLMENT
+              </span>
 
-<div class="signal">
+              <strong id="fulfillValue">
+                12.4%
+              </strong>
 
-<div>
+            </div>
 
-<span>RESPONSE DELAY</span>
+            <input
+              id="fulfillment"
+              type="range"
+              min="0"
+              max="30"
+              step="0.1"
+              value="12.4"
+              oninput="updateDashboard()">
 
-<strong id="responseValue">31%</strong>
+            <small id="fulfillStatus">
+              HIGH
+            </small>
 
-</div>
+          </div>
 
-<input
-id="response"
-type="range"
-min="0"
-max="100"
-value="31"
-oninput="updateDashboard()"
->
 
-<small id="responseStatus">
-WATCH
-</small>
+          <!-- RESPONSE -->
 
-</div>
+          <div class="signal">
 
-</div>
+            <div>
 
-</div>
+              <span>
+                RESPONSE DELAY
+              </span>
 
+              <strong id="responseValue">
+                31%
+              </strong>
 
-<div class="panel decision">
+            </div>
 
-<div class="panel-head">
+            <input
+              id="response"
+              type="range"
+              min="0"
+              max="100"
+              value="31"
+              oninput="updateDashboard()">
 
-<div>
+            <small id="responseStatus">
+              WATCH
+            </small>
 
-<label>AI DECISION ENGINE</label>
+          </div>
 
-<h2>Highest-value next move</h2>
+        </div>
 
-</div>
+      </div>
 
-<span class="ai">AI</span>
 
-</div>
+      <!-- ================= AI DECISION ================= -->
 
+      <div class="panel decision">
 
-<div class="recommendation">
+        <div class="panel-head">
 
-<div class="bolt">⚡</div>
+          <div>
 
-<div>
+            <label>
+              AI DECISION ENGINE
+            </label>
 
-<strong id="decision">
-Recover high-intent conversions
-</strong>
+            <h2>
+              Highest-value next move
+            </h2>
 
-<p id="decisionText">
-Prioritize checkout recovery before
-increasing acquisition spend.
-</p>
+          </div>
 
-</div>
+          <span class="ai">
+            AI
+          </span>
 
-</div>
+        </div>
 
 
-<div class="decision-bottom">
+        <div class="recommendation">
 
-<div>
+          <div class="bolt">
+            ⚡
+          </div>
 
-<span>PRIORITY RECOVERY</span>
+          <div>
 
-<strong id="priorityRecovery">$150K</strong>
+            <strong id="decision">
+              Recover high-intent conversions
+            </strong>
 
-</div>
+            <p id="decisionText">
+              Prioritize checkout recovery before
+              increasing acquisition spend.
+            </p>
 
+          </div>
 
-<div>
+        </div>
 
-<span>CONFIDENCE</span>
 
-<strong id="decisionConfidence">87%</strong>
+        <div class="decision-bottom">
 
-</div>
+          <div>
 
-</div>
+            <span>
+              PRIORITY RECOVERY
+            </span>
 
+            <strong id="priorityRecovery">
+              $150K
+            </strong>
 
-<button
-class="execute"
-onclick="executeStrategy()"
->
-EXECUTE RECOMMENDED STRATEGY →
-</button>
+          </div>
 
-</div>
 
+          <div>
 
-<div class="panel executive-insight">
+            <span>
+              CONFIDENCE
+            </span>
 
-<div class="panel-head">
+            <strong id="decisionConfidence">
+              87%
+            </strong>
 
-<div>
+          </div>
 
-<label>CEO AI INSIGHT</label>
+        </div>
 
-<h2>Executive business diagnosis</h2>
 
-</div>
+        <button
+          class="execute"
+          type="button"
+          onclick="executeStrategy()">
 
-<span class="ai">AI</span>
+          EXECUTE RECOMMENDED STRATEGY →
 
-</div>
+        </button>
 
+      </div>
 
-<div class="recommendation">
 
-<div class="bolt">◈</div>
+      <!-- ================= CEO INSIGHT ================= -->
 
-<div>
+      <div class="panel executive-insight">
 
-<strong id="ceoInsight">
-NEXUS is analyzing current business pressure.
-</strong>
+        <div class="panel-head">
 
-<p id="ceoInsightText">
-Adjust the live signals to generate
-an executive-level business diagnosis.
-</p>
+          <div>
 
-</div>
+            <label>
+              CEO AI INSIGHT
+            </label>
 
-</div>
+            <h2>
+              Executive business diagnosis
+            </h2>
 
-</div>
+          </div>
 
-</section>
+          <span class="ai">
+            AI
+          </span>
 
+        </div>
 
-<section class="revenue-impact">
 
-<div class="section-head">
+        <div class="recommendation">
 
-<div>
+          <div class="bolt">
+            ◈
+          </div>
 
-<label>
-REVENUE IMPACT INTELLIGENCE · V11.1
-</label>
+          <div>
 
-<h2>
-Quantify the cost of business pressure.
-</h2>
+            <strong id="ceoInsight">
+              NEXUS is analyzing current business pressure.
+            </strong>
 
-<p>
-NEXUS converts live business signals into
-estimated revenue exposure, recovery potential
-and executive opportunity scenarios.
-</p>
+            <p id="ceoInsightText">
+              Adjust the live signals to generate
+              an executive-level business diagnosis.
+            </p>
 
-</div>
+          </div>
 
-<span class="live-tag">
-● LIVE AI
-</span>
+        </div>
 
-</div>
+      </div>
 
+    </section>
 
-<div class="impact-grid">
 
-<div class="impact-card">
+    <!-- ================= REVENUE IMPACT ================= -->
 
-<span>ESTIMATED REVENUE LEAKAGE</span>
+    <section class="revenue-impact">
 
-<strong id="revenueLeakage">$1.82M</strong>
+      <div class="section-head">
 
-<small>Current business exposure</small>
+        <div>
 
-</div>
+          <label>
+            REVENUE IMPACT INTELLIGENCE · V11.1
+          </label>
 
+          <h2>
+            Quantify the cost of business pressure.
+          </h2>
 
-<div class="impact-card">
+          <p>
+            NEXUS converts live business signals into
+            estimated revenue exposure, recovery potential
+            and executive opportunity scenarios.
+          </p>
 
-<span>RECOVERY POTENTIAL</span>
+        </div>
 
-<strong id="recoveryPotential">$716K</strong>
+        <span class="live-tag">
+          ● LIVE AI
+        </span>
 
-<small>Estimated recoverable revenue</small>
+      </div>
 
-</div>
 
+      <div class="impact-grid">
 
-<div class="impact-card">
 
-<span>PROJECTED REVENUE UPLIFT</span>
+        <div class="impact-card">
 
-<strong id="projectedUplift">+$179K</strong>
+          <span>
+            ESTIMATED REVENUE LEAKAGE
+          </span>
 
-<small>Priority recovery scenario</small>
+          <strong id="revenueLeakage">
+            $1.82M
+          </strong>
 
-</div>
+          <small>
+            Current business exposure
+          </small>
 
+        </div>
 
-<div class="impact-card">
 
-<span>30-DAY RECOVERY FORECAST</span>
+        <div class="impact-card recovery">
 
-<strong id="forecastRevenue">$5.37M</strong>
+          <span>
+            RECOVERY POTENTIAL
+          </span>
 
-<small>Estimated protected revenue</small>
+          <strong id="recoveryPotential">
+            $716K
+          </strong>
 
-</div>
+          <small>
+            Estimated recoverable revenue
+          </small>
 
-</div>
+        </div>
 
 
-<div class="impact-footer">
+        <div class="impact-card">
 
-<div>
+          <span>
+            PROJECTED REVENUE UPLIFT
+          </span>
 
-<span>AI REVENUE OUTLOOK</span>
+          <strong id="projectedUplift">
+            +$179K
+          </strong>
 
-<strong id="revenueOutlook">
-RECOVERY OPPORTUNITY DETECTED
-</strong>
+          <small>
+            Priority recovery scenario
+          </small>
 
-</div>
+        </div>
 
 
-<div>
+        <div class="impact-card">
 
-<span>MODEL CONFIDENCE</span>
+          <span>
+            30-DAY RECOVERY FORECAST
+          </span>
 
-<strong id="modelConfidence">91%</strong>
+          <strong id="forecastRevenue">
+            $5.37M
+          </strong>
 
-</div>
+          <small>
+            Estimated protected revenue
+          </small>
 
-</div>
+        </div>
 
-</section>
+      </div>
 
 
-<section class="action-center">
+      <div class="impact-footer">
 
-<div class="section-head">
+        <div class="outlook">
 
-<div>
+          <span>
+            AI REVENUE OUTLOOK
+          </span>
 
-<label>EXECUTIVE ACTION CENTER</label>
+          <strong id="revenueOutlook">
+            RECOVERY OPPORTUNITY DETECTED
+          </strong>
 
-<h2>
-What NEXUS recommends doing next.
-</h2>
+        </div>
 
-<p>
-Prioritized actions based on current business pressure.
-</p>
 
-</div>
+        <div class="confidence-box">
 
-<span class="ai">AI</span>
+          <span>
+            MODEL CONFIDENCE
+          </span>
 
-</div>
+          <strong id="modelConfidence">
+            91%
+          </strong>
 
+        </div>
 
-<div class="action-grid">
+      </div>
 
+    </section>
 
-<div class="action-card active-action">
 
-<div class="action-number">01</div>
+    <!-- ================= ACTION CENTER ================= -->
 
-<div class="action-content">
+    <section class="action-center">
 
-<span>PRIORITY ACTION</span>
+      <div class="section-head">
 
-<h3 id="actionTitle">
-Recover high-intent customers
-</h3>
+        <div>
 
-<p id="actionDescription">
-Address conversion leakage before
-increasing acquisition spend.
-</p>
+          <label>
+            EXECUTIVE ACTION CENTER
+          </label>
 
-</div>
+          <h2>
+            What NEXUS recommends doing next.
+          </h2>
 
-<div class="action-value">
+          <p>
+            Prioritized actions based on current business pressure.
+          </p>
 
-<span>EXPECTED IMPACT</span>
+        </div>
 
-<strong id="actionImpact">+$179K</strong>
+        <span class="ai">
+          AI
+        </span>
 
-</div>
+      </div>
 
-</div>
 
+      <div class="action-grid">
 
-<div class="action-card">
 
-<div class="action-number">02</div>
+        <!-- ACTION 01 -->
 
-<div class="action-content">
+        <div class="action-card active-action">
 
-<span>OPTIMIZATION</span>
+          <div class="action-number">
+            01
+          </div>
 
-<h3>Reduce cancellation pressure</h3>
+          <div class="action-content">
 
-<p>
-Trigger retention workflows for
-customers showing cancellation intent.
-</p>
+            <span>
+              PRIORITY ACTION
+            </span>
 
-</div>
+            <h3 id="actionTitle">
+              Recover high-intent customers
+            </h3>
 
-<div class="action-value">
+            <p id="actionDescription">
+              Address conversion leakage before
+              increasing acquisition spend.
+            </p>
 
-<span>OPPORTUNITY</span>
+          </div>
 
-<strong>+$96K</strong>
+          <div class="action-value">
 
-</div>
+            <span>
+              EXPECTED IMPACT
+            </span>
 
-</div>
+            <strong id="actionImpact">
+              +$179K
+            </strong>
 
+          </div>
 
-<div class="action-card">
+        </div>
 
-<div class="action-number">03</div>
 
-<div class="action-content">
+        <!-- ACTION 02 -->
 
-<span>OPERATIONS</span>
+        <div class="action-card">
 
-<h3>Stabilize fulfillment performance</h3>
+          <div class="action-number">
+            02
+          </div>
 
-<p>
-Reduce service friction before
-scaling additional demand.
-</p>
+          <div class="action-content">
 
-</div>
+            <span>
+              OPTIMIZATION
+            </span>
 
-<div class="action-value">
+            <h3>
+              Reduce cancellation pressure
+            </h3>
 
-<span>IMPACT</span>
+            <p>
+              Trigger retention workflows for
+              customers showing cancellation intent.
+            </p>
 
-<strong>+$72K</strong>
+          </div>
 
-</div>
+          <div class="action-value">
 
-</div>
+            <span>
+              OPPORTUNITY
+            </span>
 
-</div>
+            <strong>
+              +$96K
+            </strong>
 
-</section>
+          </div>
 
+        </div>
 
-<section class="what-if">
 
-<div class="what-if-copy">
+        <!-- ACTION 03 -->
 
-<label>WHAT-IF SIMULATION</label>
+        <div class="action-card">
 
-<h2>
-Show the CEO what improvement is worth.
-</h2>
+          <div class="action-number">
+            03
+          </div>
 
-<p>
-Adjust conversion performance and see
-the estimated business health improve in real time.
-</p>
+          <div class="action-content">
 
-</div>
+            <span>
+              OPERATIONS
+            </span>
 
+            <h3>
+              Stabilize fulfillment performance
+            </h3>
 
-<div class="simulator">
+            <p>
+              Reduce service friction before
+              scaling additional demand.
+            </p>
 
-<div class="sim-top">
+          </div>
 
-<span>TARGET CONVERSION</span>
+          <div class="action-value">
 
-<strong id="targetConversion">3.21%</strong>
+            <span>
+              IMPACT
+            </span>
 
-</div>
+            <strong>
+              +$72K
+            </strong>
 
-<input
-id="targetSlider"
-type="range"
-min="2"
-max="6"
-step="0.01"
-value="3.21"
-oninput="runWhatIf()"
->
+          </div>
 
+        </div>
 
-<div class="projection">
+      </div>
 
-<div>
+    </section>
 
-<span>PROJECTED HEALTH</span>
 
-<strong id="projectedHealth">87</strong>
+    <!-- ================= WHAT IF ================= -->
 
-<small>/100</small>
+    <section class="what-if">
 
-</div>
+      <div class="what-if-copy">
 
-<div
-class="projection-status"
-id="projectionStatus"
->
-IMPROVEMENT DETECTED
-</div>
+        <label>
+          WHAT-IF SIMULATION
+        </label>
 
-</div>
+        <h2>
+          Show the CEO what improvement is worth.
+        </h2>
 
-</div>
+        <p>
+          Adjust conversion performance and see
+          the estimated business health improve in real time.
+        </p>
 
-</section>
+      </div>
 
 
-<section class="executive-cta">
+      <div class="simulator">
 
-<div>
+        <div class="sim-top">
 
-<label>EXECUTIVE INTELLIGENCE</label>
+          <span>
+            TARGET CONVERSION
+          </span>
 
-<h2>
-See what NEXUS could uncover inside your business.
-</h2>
+          <strong id="targetConversion">
+            3.21%
+          </strong>
 
-<p>
-Connect your business data and move from
-static reporting to autonomous decision intelligence.
-</p>
+        </div>
 
-</div>
 
+        <input
+          id="targetSlider"
+          type="range"
+          min="2"
+          max="6"
+          step="0.01"
+          value="3.21"
+          oninput="runWhatIf()"
+        >
 
-<button
-class="primary"
-onclick="openLeadForm()"
->
-REQUEST EXECUTIVE DEMO →
-</button>
 
-</section>
+        <div class="projection">
 
+          <div>
 
-<footer class="footer">
+            <span>
+              PROJECTED HEALTH
+            </span>
 
-<div>
-NEXUS COMMAND AI · V11.1
-</div>
+            <strong id="projectedHealth">
+              87
+            </strong>
 
-<div>
-Executive Decision Intelligence Platform · 2026
-</div>
+            <small>
+              /100
+            </small>
 
-</footer>
+          </div>
 
+          <div
+            class="projection-status"
+            id="projectionStatus">
 
-</main>
+            IMPROVEMENT DETECTED
 
-</div>
+          </div>
 
+        </div>
 
-<div
-class="modal"
-id="leadModal"
-aria-hidden="true"
->
+      </div>
 
-<div
-class="modal-overlay"
-onclick="closeLeadForm()"
-></div>
+    </section>
 
 
-<div class="modal-box">
+    <!-- ================= CTA ================= -->
 
-<button
-class="modal-close"
-onclick="closeLeadForm()"
->
-×
-</button>
+    <section class="executive-cta">
 
+      <div>
 
-<label>EXECUTIVE ACCESS</label>
+        <label>
+          EXECUTIVE INTELLIGENCE
+        </label>
 
-<h2>
-Request a NEXUS Demo
-</h2>
+        <h2>
+          See what NEXUS could uncover inside your business.
+        </h2>
 
-<p>
-See how NEXUS can identify revenue exposure,
-recovery opportunities and high-value actions.
-</p>
+        <p>
+          Connect your business data and move from
+          static reporting to autonomous decision intelligence.
+        </p>
 
+      </div>
 
-<form
-id="leadForm"
-onsubmit="submitLead(event)"
->
 
-<input
-type="text"
-id="leadName"
-placeholder="Your name"
-required
->
+      <button
+        class="primary"
+        type="button"
+        onclick="openLeadForm()">
 
+        REQUEST EXECUTIVE DEMO →
 
-<input
-type="email"
-id="leadEmail"
-placeholder="Business name"
->
+      </button>
 
-<input
-type="tel"
-id="leadPhone"
-placeholder="Phone / WhatsApp"
->
+    </section>
 
-<input
-type="text"
-id="leadCompany"
-placeholder="Company / Industry"
->
 
-<select id="leadInterest" required>
-<option value="">Select your interest</option>
-<option value="Revenue Intelligence">Revenue Intelligence</option>
-<option value="AI Decision Intelligence">AI Decision Intelligence</option>
-<option value="Executive Analytics">Executive Analytics</option>
-<option value="Enterprise AI">Enterprise AI</option>
-</select>
+    <!-- ================= FOOTER ================= -->
 
-<button
-type="submit"
-class="primary"
->
-REQUEST EXECUTIVE ACCESS →
-</button>
+    <footer class="footer">
 
-</form>
+      <div>
+        NEXUS COMMAND AI · V11.1
+      </div>
 
-<div
-id="leadSuccess"
-style="display:none;"
->
-<strong>✓ REQUEST RECEIVED</strong>
+      <div>
+        Executive Decision Intelligence Platform · 2026
+      </div>
 
-<p>
-Your executive demo request has been captured.
-NEXUS Command AI will prepare your intelligence briefing.
-</p>
+    </footer>
 
-</div>
-
-</div>
+  </main>
 
 </div>
 
 
 <!-- =====================================================
-SCRIPT
+     EXECUTIVE DEMO MODAL
 ====================================================== -->
+
+<div
+  class="modal"
+  id="leadModal"
+  aria-hidden="true">
+
+  <div
+    class="modal-overlay"
+    onclick="closeLeadForm()">
+  </div>
+
+
+  <div class="modal-box">
+
+    <button
+      class="modal-close"
+      type="button"
+      aria-label="Close"
+      onclick="closeLeadForm()">
+
+      ×
+
+    </button>
+
+
+    <label>
+      EXECUTIVE ACCESS
+    </label>
+
+    <h2>
+      Request a NEXUS Demo
+    </h2>
+
+    <p>
+      See how NEXUS can identify revenue exposure,
+      recovery opportunities and high-value actions.
+    </p>
+
+
+    <form
+      id="leadForm"
+      onsubmit="submitLead(event)">
+
+
+      <input
+        type="text"
+        id="leadName"
+        placeholder="Your name"
+        autocomplete="name"
+        required
+      >
+
+
+      <input
+        type="email"
+        id="leadEmail"
+        placeholder="Business email"
+        autocomplete="email"
+        required
+      >
+
+
+      <input
+        type="text"
+        id="leadCompany"
+        placeholder="Company name"
+        autocomplete="organization"
+        required
+      >
+
+
+      <select
+        id="leadRole"
+        required>
+
+        <option value="">
+          Your role
+        </option>
+
+        <option value="CEO">
+          CEO / Founder
+        </option>
+
+        <option value="COO">
+          COO
+        </option>
+
+        <option value="CFO">
+          CFO
+        </option>
+
+        <option value="CMO">
+          CMO
+        </option>
+
+        <option value="VP">
+          VP / Executive
+        </option>
+
+        <option value="Other">
+          Other
+        </option>
+
+      </select>
+
+
+      <button
+        type="submit">
+
+        REQUEST EXECUTIVE ACCESS →
+
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- ================= SCRIPT ================= -->
 
 <script src="script.js"></script>
 
 </body>
-</html>
+  </html>

@@ -49,7 +49,7 @@ function money(value) {
 
 
 /* =========================================================
-   READ SIGNALS
+   READ LIVE SIGNALS
 ========================================================= */
 
 function getSignals() {
@@ -80,24 +80,21 @@ function calculateHealth(signals) {
   const responseScore =
     ((100 - signals.response) / 100) * 20;
 
-  let health =
+  const health =
     conversionScore +
     cancellationScore +
     fulfillmentScore +
     responseScore;
 
-  return Math.round(
-    clamp(health, 35, 98)
-  );
+  return Math.round(clamp(health, 35, 98));
 }
 
 
 /* =========================================================
-   CONFIDENCE
+   CONFIDENCE ENGINE
 ========================================================= */
 
 function calculateConfidence(health) {
-
   return Math.round(
     clamp(
       82 + Math.abs(health - 70) * 0.35,
@@ -109,44 +106,36 @@ function calculateConfidence(health) {
 
 
 /* =========================================================
-   STATUS ENGINE
+   SIGNAL STATUS
 ========================================================= */
 
 function getStatus(value, type) {
 
   if (type === "conversion") {
-
     if (value < 2.5) return "CRITICAL";
     if (value < 3.2) return "HIGH RISK";
     if (value < 4) return "WATCH";
-
     return "HEALTHY";
   }
 
   if (type === "cancellation") {
-
     if (value >= 12) return "CRITICAL";
     if (value >= 7) return "HIGH";
     if (value >= 4) return "WATCH";
-
     return "STABLE";
   }
 
   if (type === "fulfillment") {
-
     if (value >= 20) return "CRITICAL";
     if (value >= 10) return "HIGH";
     if (value >= 5) return "WATCH";
-
     return "STABLE";
   }
 
   if (type === "response") {
-
     if (value >= 60) return "CRITICAL";
     if (value >= 30) return "WATCH";
     if (value >= 15) return "MODERATE";
-
     return "FAST";
   }
 
@@ -161,7 +150,7 @@ function getStatus(value, type) {
 function calculateDecision(signals) {
 
   const conversionRisk =
-    (4 - signals.conversion) * 30;
+    Math.max(0, 4 - signals.conversion) * 30;
 
   const cancellationRisk =
     signals.cancellation * 2;
@@ -176,28 +165,32 @@ function calculateDecision(signals) {
     {
       score: conversionRisk,
       title: "Recover high-intent conversions",
-      text: "Prioritize checkout recovery before increasing acquisition spend.",
+      text:
+        "Prioritize checkout recovery before increasing acquisition spend.",
       recovery: 150000,
       action: "Recover high-intent customers"
     },
     {
       score: cancellationRisk,
       title: "Reduce cancellation pressure",
-      text: "Trigger retention workflows for customers showing cancellation intent.",
+      text:
+        "Trigger retention workflows for customers showing cancellation intent.",
       recovery: 96000,
       action: "Reduce cancellation pressure"
     },
     {
       score: fulfillmentRisk,
       title: "Stabilize fulfillment performance",
-      text: "Reduce service friction before scaling additional demand.",
+      text:
+        "Reduce service friction before scaling additional demand.",
       recovery: 72000,
       action: "Stabilize fulfillment performance"
     },
     {
       score: responseRisk,
       title: "Improve response speed",
-      text: "Reduce response delays across high-value customer interactions.",
+      text:
+        "Reduce response delays across high-value customer interactions.",
       recovery: 68000,
       action: "Improve response speed"
     }
@@ -224,13 +217,348 @@ function updateDashboard() {
   NexusState.lastHealth = health;
   NexusState.lastConfidence = confidence;
 
-  /* -----------------------------------------
-     SIGNAL VALUES
-  ----------------------------------------- */
+  /* SIGNAL VALUES */
 
   setText(
     "conversionValue",
     signals.conversion.toFixed(2) + "%"
   );
 
-  set
+  setText(
+    "cancelValue",
+    signals.cancellation.toFixed(1) + "%"
+  );
+
+  setText(
+    "fulfillValue",
+    signals.fulfillment.toFixed(1) + "%"
+  );
+
+  setText(
+    "responseValue",
+    Math.round(signals.response) + "%"
+  );
+
+  /* SIGNAL STATUS */
+
+  setText(
+    "conversionStatus",
+    getStatus(signals.conversion, "conversion")
+  );
+
+  setText(
+    "cancelStatus",
+    getStatus(signals.cancellation, "cancellation")
+  );
+
+  setText(
+    "fulfillStatus",
+    getStatus(signals.fulfillment, "fulfillment")
+  );
+
+  setText(
+    "responseStatus",
+    getStatus(signals.response, "response")
+  );
+
+  /* HEALTH */
+
+  setText("healthScore", health);
+  setText("confidence", confidence + "%");
+
+  const healthBar = $("healthBar");
+
+  if (healthBar) {
+    healthBar.style.width = health + "%";
+  }
+
+  let healthStatus = "SYSTEM STABLE";
+
+  if (health < 50) {
+    healthStatus = "CRITICAL PRESSURE";
+  } else if (health < 65) {
+    healthStatus = "HIGH PRESSURE";
+  } else if (health < 80) {
+    healthStatus = "WATCH CONDITION";
+  }
+
+  setText("healthStatus", healthStatus);
+
+  /* SIGNAL COUNT */
+
+  const signalCount =
+    24 +
+    Math.round(
+      signals.cancellation +
+      signals.fulfillment / 2
+    );
+
+  setText(
+    "signalsAnalyzed",
+    clamp(signalCount, 24, 96)
+  );
+
+  /* DECISION */
+
+  setText("decision", decision.title);
+  setText("decisionText", decision.text);
+  setText(
+    "priorityRecovery",
+    money(decision.recovery)
+  );
+
+  const decisionConfidence =
+    clamp(
+      confidence - 3 + Math.round(decision.score / 20),
+      78,
+      96
+    );
+
+  setText(
+    "decisionConfidence",
+    decisionConfidence + "%"
+  );
+
+  /* PRIORITY */
+
+  let priority = "HIGH";
+  let priorityText = "Conversion recovery";
+
+  if (health >= 82) {
+    priority = "MEDIUM";
+    priorityText = "Growth optimization";
+  }
+
+  if (health < 55) {
+    priority = "CRITICAL";
+    priorityText = "Immediate revenue protection";
+  }
+
+  setText("priority", priority);
+  setText("priorityText", priorityText);
+
+  /* REVENUE MODEL */
+
+  const pressure =
+    clamp(
+      (
+        (4 - signals.conversion) * 0.35 +
+        signals.cancellation * 0.025 +
+        signals.fulfillment * 0.018 +
+        signals.response * 0.008
+      ),
+      0.05,
+      0.95
+    );
+
+  const leakage =
+    1200000 + pressure * 1400000;
+
+  const recovery =
+    leakage * clamp(
+      0.28 + (100 - health) / 300,
+      0.25,
+      0.65
+    );
+
+  const uplift =
+    recovery * 0.25;
+
+  const forecast =
+    4200000 + recovery * 1.65;
+
+  setText(
+    "revenueRisk",
+    money(leakage * 1.32)
+  );
+
+  setText(
+    "recoverable",
+    money(recovery)
+  );
+
+  const customers =
+    Math.round(
+      11000 +
+      pressure * 14000
+    );
+
+  setText(
+    "customers",
+    customers.toLocaleString()
+  );
+
+  setText(
+    "revenueLeakage",
+    money(leakage)
+  );
+
+  setText(
+    "recoveryPotential",
+    money(recovery)
+  );
+
+  setText(
+    "projectedUplift",
+    "+" + money(uplift)
+  );
+
+  setText(
+    "forecastRevenue",
+    money(forecast)
+  );
+
+  /* OUTLOOK */
+
+  let outlook =
+    "RECOVERY OPPORTUNITY DETECTED";
+
+  if (health < 55) {
+    outlook =
+      "IMMEDIATE REVENUE PROTECTION REQUIRED";
+  } else if (health >= 85) {
+    outlook =
+      "BUSINESS MOMENTUM HEALTHY";
+  }
+
+  setText(
+    "revenueOutlook",
+    outlook
+  );
+
+  setText(
+    "modelConfidence",
+    Math.min(97, confidence + 1) + "%"
+  );
+
+  /* CEO INSIGHT */
+
+  generateCEOInsight(
+    signals,
+    health,
+    decision
+  );
+
+  /* ACTION CENTER */
+
+  setText(
+    "actionTitle",
+    decision.action
+  );
+
+  setText(
+    "actionDescription",
+    decision.text
+  );
+
+  setText(
+    "actionImpact",
+    "+" + money(uplift)
+  );
+}
+
+
+/* =========================================================
+   CEO AI INSIGHT
+========================================================= */
+
+function generateCEOInsight(
+  signals,
+  health,
+  decision
+) {
+
+  let insight =
+    "NEXUS detects a manageable revenue opportunity.";
+
+  let detail =
+    "The highest-value move is to address the dominant pressure signal before scaling growth.";
+
+  if (health < 55) {
+
+    insight =
+      "Executive attention required: revenue pressure is elevated.";
+
+    detail =
+      "Protect existing revenue first. NEXUS recommends resolving the highest-risk operating signal before additional acquisition spend.";
+  }
+
+  else if (
+    signals.conversion < 3.0
+  ) {
+
+    insight =
+      "Conversion leakage is currently the dominant revenue pressure.";
+
+    detail =
+      "High-intent customer recovery should be prioritized because improving conversion can create faster revenue impact than increasing acquisition.";
+  }
+
+  else if (
+    signals.cancellation >= 10
+  ) {
+
+    insight =
+      "Customer retention pressure is becoming a material risk.";
+
+    detail =
+      "Deploy targeted retention interventions before cancellation behavior compounds into larger revenue leakage.";
+  }
+
+  else if (
+    signals.fulfillment >= 15
+  ) {
+
+    insight =
+      "Operational friction is limiting revenue performance.";
+
+    detail =
+      "Stabilize fulfillment capacity and customer experience before accelerating demand generation.";
+  }
+
+  else if (
+    signals.response >= 45
+  ) {
+
+    insight =
+      "Response latency is creating avoidable conversion pressure.";
+
+    detail =
+      "Prioritize faster responses for high-value opportunities to reduce preventable revenue loss.";
+  }
+
+  else if (health >= 85) {
+
+    insight =
+      "Business signals indicate strong operating momentum.";
+
+    detail =
+      "NEXUS recommends shifting from protection toward controlled growth and conversion optimization.";
+  }
+
+  setText(
+    "ceoInsight",
+    insight
+  );
+
+  setText(
+    "ceoInsightText",
+    detail
+  );
+}
+
+
+/* =========================================================
+   LIVE SIMULATION
+========================================================= */
+
+function runSimulation() {
+
+  if (NexusState.simulationRunning) {
+    return;
+  }
+
+  NexusState.simulationRunning = true;
+
+  const button =
+   

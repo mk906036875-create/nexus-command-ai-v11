@@ -1,7 +1,7 @@
 ⚡ NEXUS COMMAND AI V11.1
 
 <p align="center">
-  <img src="nexus-command-ai-v11-banner.png" alt="NEXUS COMMAND AI V11.1 — Executive Decision Intelligence" width="100%">
+  <img file_00000000d250820bad688ae696dcef1c.png COMMAND AI V11.1 — Executive Decision Intelligence" width="100%">
 </p><p align="center">ENTERPRISE EXECUTIVE DECISION INTELLIGENCE
 
 Turn Business Signals Into Executive Decisions.
